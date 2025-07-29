@@ -1,0 +1,129 @@
+#pie-pagina {
+    background-color: #81e1f4;
+    color: #1a1a1a;
+    padding: 40px 20px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contenedor-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-col.redes .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-col.redes .social-icons a {
+    display: inline-block;
+    border: 1px solid #1a1a1a;
+    padding: 8px;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.footer-col.redes .social-icons a:hover {
+    background-color: #003b49;
+    color: white;
+}
+
+a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+a:hover {
+     text-decoration: none;
+}
+
+.copyright-footer {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+@media (max-width: 760px) {
+    .contenedor-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px; /* poco espacio entre secciones */
+        padding: 20px 10px;
+        width: 100%;
+        /* Sele suma 60px y da 350px */
+        max-width: 290px;
+    }
+
+    .footer-col {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-col.redes .social-icons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo-footer {
+        margin-bottom: 10px;
+    }
+
+    footer#pie-pagina .container {
+        padding: 10px;
+    }
+
+    footer#pie-pagina p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+}

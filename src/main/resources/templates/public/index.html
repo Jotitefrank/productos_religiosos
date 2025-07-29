@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio | Adopta una Mascota</title>
+
+  <!-- Fuente amigable y moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" th:href="@{/public/css/fragments/header.css}" />
+  <link rel="stylesheet" th:href="@{/public/css/fragments/footer.css}" />
+  <link rel="stylesheet" th:href="@{/public/css/index.css}" />
+    
+  <!-- JS -->
+<script th:src="@{/public/js/fragments/header.js}" defer></script>
+
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div th:replace="public/fragments/header :: encabezado"></div>
+
+  <!-- Contenido principal -->
+  <main class="main-container">
+    <section class="hero">
+      <h1><strong>Adopta. Ama. Cambia una vida. 💙</strong></h1>
+      <p>Con tu ayuda, podemos darles una segunda oportunidad a cientos de mascotas.</p>
+      <a class="btn-cita" th:href="@{/adopta}">Ver mascotas en adopción</a>
+    </section>
+
+      <img src="/src/main/resources/static/public/imgs/fragments/¡Adopción-Inteligente_.webp" alt="">
+  </main>
+
+  <!-- Pie de página -->
+  <div th:replace="public/fragments/footer :: pie"></div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+/* ======== CONTENEDOR PRINCIPAL ======== */
+.header-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #81e1f4;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;       /* Permite que salte a nueva línea en móvil  */
+  position: relative;
+  
+}
+
+/* ======== LOGO ======== */
+.logo-img {
+  max-height: 4rem; 
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+/* ======== MENÚ ======== */
+.nav-center ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.nav-center a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+  text-decoration: none;
+  color: #003b49;
+ 
+}
+
+/* ======== BOTÓN LOGIN ======== */
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-login {
+  background-color: #ffffff;
+  color: #003b49;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.nav-center a,
+.btn-login {
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  background-color: #dff3e4;
+  text-decoration: none;
+}
+
+/* ======== BOTÓN HAMBURGUESA (oculto en desktop) ======== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+/* Ocultar por defecto en escritorio */
+.login-item.mobile-only {
+  display: none;
+}
+/* ======== RESPONSIVE ======== */
+@media (max-width: 760px) {
+ 
+   .header-container {
+    min-width: 320px;  /* Aquí se aplica solo en móviles */
+    max-width: 375px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .menu-toggle {
+    display: block; /* Mostrar hamburguesa */
+  }
+  /* Mostrar solo en móviles y cuando el menú está activo */
+
+  .nav-center.active .login-item.mobile-only {
+    display: block;
+    margin-top: 10px;
+  }
+  /* Ocultar nav y login por defecto en móvil */
+  .nav-center,
+  .user-actions {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  .nav-center ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  /* Cuando el menú está activo (JS agrega la clase) */
+  .nav-center.active {
+    display: flex;
+  }
+
+  .user-actions.active {
+    display: flex;
+  }
+
+}
